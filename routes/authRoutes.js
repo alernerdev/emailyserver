@@ -17,4 +17,11 @@ module.exports = (app) => {
     app.get(
         "/auth/google/callback", passport.authenticate('google')
     );
+
+    /* if everything is setup correctly (cookies/session, passport de/serialization) then mongoose user instance 
+    is magically attached to the request
+    */
+    app.get('/api/current_user', (req, res) => {
+        res.send(req.user);
+    });
 }
