@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-#private keys stuff
-keys.js
+#private keys stuff. Dev keys not committed, and prod keys are running off the environment variables
+config/dev.js
