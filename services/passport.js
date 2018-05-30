@@ -45,10 +45,13 @@ passport.deserializeUser((id, done)=>{
 passport.use(
     new GoogleStrategy(
         {
+            proxy: true, // tells the strategy to trust proxies between the browser and the actual server (for heroku)
             clientID: keys.googleClientID,
             clientSecret: keys.googleClientSecret,
+                                            /* rather than proxy:true, its probably better to stick with full callbackURL
+                                            rather than relative URL.  Need to make it dev/prod environment specific */
             callbackURL: "/auth/google/callback" // where to redirect after user grants premission
-            // the callback needs to match console.developers.google.com entry
+                                                // the callback needs to match console.developers.google.com entry
         },
         (accessToken, refreshToken, profile, done) => {
             // auth step 3.  Google calling us back again
