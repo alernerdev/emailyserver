@@ -1,8 +1,8 @@
 // prod.js -- production keys
 module.exports = {
-	googleClientID: '605235560369-i7u4v871cboa704fnlquf0opl4h4i13c.apps.googleusercontent.com',
-    googleClientSecret: 'c0liX63K0EJrIKuOW6qs_MWw',
-    mongoURI: 'mongodb://alernerdev:password@ds231090.mlab.com:31090/emaily-dev',
+	googleClientID: '126884311290-rg1953qnmb26u10phg53k71s5g2flg3s.apps.googleusercontent.com',
+    googleClientSecret: 'eRDtHIaJ3E9yWcQD8wt5ZtkB',
+    mongoURI: 'mongodb://alexprod:password01@ds239940.mlab.com:39940/emaily-prod',
 	cookieKey: 'blahalernerdev@gmail.comblah'
 
     /*googleClientID: process.env.GOOGLE_CLIENT_ID,
