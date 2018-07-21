@@ -13,8 +13,8 @@ const app = express();
 // collection of middleware each of which modifies the incoming requests
 app.use(
     cookieSession({
-        maxAge: 30 * 24 * 60 * 60 * 1000,    // cookie lasts 30 days
-        keys: [keys.cookieKey]  // for encryption
+        maxAge: 30 * 24 * 60 * 60 * 1000,	// cookie lasts 30 days (in milliseconds)
+        keys: [keys.cookieKey]				// for encryption
     })
 );
 

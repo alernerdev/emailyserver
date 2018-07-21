@@ -21,12 +21,13 @@ module.exports = (app) => {
     app.get(
         "/api/logout", (req, res) => {
             // logout is a function added by passport. It kills the cookie.
-            req.logout();
-            // req.user no longer exists -- this is an "empty" response          
+			req.logout();
+
+            // req.user no longer exists -- this is an "empty" response
             res.send(req.user);
     });
 
-    /* if everything is setup correctly (cookies/session, passport de/serialization) then mongoose user instance 
+    /* if everything is setup correctly (cookies/session, passport de/serialization) then mongoose user instance
     is magically attached to the request
     */
     app.get('/api/current_user', (req, res) => {
