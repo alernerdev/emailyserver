@@ -4,11 +4,13 @@ import { BrowserRouter, Route } from "react-router-dom";
 import { connect } from "react-redux"; // connectivity between react and redux libraries
 
 import Header from "./Header";
+import Landing from "./Landing";
+
 import * as actions from "../actions";
 
 const Dashboard = () => <h2>Dashboard</h2>;
 const SurveryNew = () => <h2>SurveryNew</h2>;
-const Landing = () => <h2>Landing</h2>;
+
 
 class App extends Component {
 	componentDidMount() {

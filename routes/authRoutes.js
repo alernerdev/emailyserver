@@ -15,7 +15,12 @@ module.exports = (app) => {
     // this is coming back from google. And there is going to be a code after the callback in the URL
     // auth step 2
     app.get(
-        "/auth/google/callback", passport.authenticate('google')
+        "/auth/google/callback", 
+        passport.authenticate('google'),
+        (req, res) => {
+            // after successful login, redirect to Dashboard
+            res.redirect('/surveys');
+        }
     );
 
     app.get(
@@ -24,7 +29,7 @@ module.exports = (app) => {
 			req.logout();
 
             // req.user no longer exists -- this is an "empty" response
-            res.send(req.user);
+            res.redirect("/");
     });
 
     /* if everything is setup correctly (cookies/session, passport de/serialization) then mongoose user instance
