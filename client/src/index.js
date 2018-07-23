@@ -1,3 +1,4 @@
+// lack of relative path ( ./ ) indicates to webpack that its a node module
 import 'materialize-css/dist/css/materialize.min.css';
 
 import React from 'react';
